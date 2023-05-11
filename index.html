@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neural Style Transfer : WebGL</title>
+    <meta charset="utf-8">
+    <script src="js/inflate.min.js"></script>
+    <script src="js/webdnn.js"></script>
+    <script src="js/webcam.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="Layer OutputLayer" onclick="togglePause(); return false;">
+        <canvas id="result" width="192" height="144"></canvas>
+    </div>
+
+    <div class="Layer CameraLayer"></div>
+
+    <canvas id="snap" width="192" height="144"></canvas>
+
+    <div class="menu">
+        <p style="font-size: 22px; font-weight: normal; color: #fff;">实时水墨画风格迁移</p>
+        <p style="margin-top:50px;font-size: 18px;"></p>
+
+        <a href="javascript:initialize('./output-candy', 'CANDY');">CANDY</a>
+        <hr>
+        <a href="javascript:initialize('./output-composition', 'COMP');">COMP</a>
+
+
+        <p style="margin-top:60px;font-size: 18px;">状态</p>
+        <div id="status" onclick="togglePause(); return false;">
+            开始
+        </div>
+    </div>
+
+</body>
+
+</html>
